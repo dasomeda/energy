@@ -16,7 +16,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Add Image
-st.image("image\\first.webp", use_container_width=True, caption="🌟 우리동네 에너지안전 지킴이 프로젝트 🌟")
+st.image("image/first.webp", use_container_width=True, caption="🌟 우리동네 에너지안전 지킴이 프로젝트 🌟")
 
 st.divider()
 
