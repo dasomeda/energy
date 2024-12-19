@@ -9,8 +9,8 @@ import numpy as np
 # Streamlit 기본 설정
 st.set_page_config(page_title="한글 깨짐 방지 테스트", layout="wide")
 
-# Matplotlib에서 기본 한글 폰트 설정
-plt.rcParams['font.family'] = 'Arial'  # 기본적으로 제공되는 Arial로 지정
+# 한글 폰트 설정
+rc('font', family='Nanum Gothic')  # Nanum Gothic 폰트 사용
 plt.rcParams['axes.unicode_minus'] = False  # 마이너스 기호 깨짐 방지
 
 # Main App Tabs
