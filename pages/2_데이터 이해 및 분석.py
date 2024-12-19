@@ -5,12 +5,17 @@ from streamlit_folium import st_folium
 import matplotlib.pyplot as plt
 from matplotlib import rc
 import numpy as np
-from matplotlib import rcParams
+from matplotlib import font_manager
 
-# matplotlib 기본 폰트로 설정
-rcParams.update({'font.family': 'DejaVu Sans'})
-plt.rcParams['axes.unicode_minus'] = False  # 마이너스 기호 깨짐 방지
+# 설치된 시스템 폰트 확인
+fonts = font_manager.findSystemFonts(fontpaths=None, fontext='ttf')
 
+# 적절한 한글 폰트 선택 (NanumGothic 예제)
+font_path = [f for f in fonts if 'Gothic' in f]
+if font_path:
+    plt.rc('font', family=font_manager.FontProperties(fname=font_path[0]).get_name())
+else:
+    print("적절한 한글 폰트를 찾을 수 없습니다.")
 
 # Main App Tabs
 st.set_page_config(page_title="데이터 이해 및 분석", layout="wide")
