@@ -6,8 +6,6 @@ import matplotlib.pyplot as plt
 from matplotlib import rc
 import numpy as np
 
-df.to_csv('filename.csv', index=False, encoding='utf-8') # 한글 깨짐 발생 할 때 
-df.to_csv('filename.csv', index=False, encoding='utf-8-sig') # 한글 정상 표현
 
 # Main App Tabs
 st.set_page_config(page_title="데이터 이해 및 분석", layout="wide")
@@ -31,6 +29,8 @@ with tabs[0]:
     # CSV 파일 경로
     file_path = "서울특별시 강서구_공공태양광 발전량 현황_20231207.csv"
 
+    df.to_csv('filename.csv', index=False, encoding='utf-8') # 한글 깨짐 발생 할 때 
+    
     # 데이터 로드
     try:
         solar_data = pd.read_csv(file_path, encoding='cp949')
