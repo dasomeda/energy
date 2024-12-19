@@ -5,6 +5,7 @@ from streamlit_folium import st_folium
 import matplotlib.pyplot as plt
 from matplotlib import rc
 import numpy as np
+import koreanize-matplotlib
 
 # Main App Tabs
 st.set_page_config(page_title="데이터 이해 및 분석", layout="wide")
