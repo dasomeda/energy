@@ -6,8 +6,6 @@ import matplotlib.pyplot as plt
 from matplotlib import rc
 import numpy as np
 
-# Streamlit 기본 설정
-st.set_page_config(page_title="한글 깨짐 방지 테스트", layout="wide")
 
 # 한글 폰트 설정
 rc('font', family='Nanum Gothic')  # Nanum Gothic 폰트 사용
