@@ -28,7 +28,7 @@ with tabs[0]:
 
     # CSV 파일 경로
     file_path = "서울특별시 강서구_공공태양광 발전량 현황_20231207.csv"
-    df.to_csv('filename.csv', index=False, encoding='utf-8-sig') # 한글 정상 표현
+
     
     # 데이터 로드
     try:
