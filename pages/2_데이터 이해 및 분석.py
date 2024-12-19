@@ -5,6 +5,12 @@ from streamlit_folium import st_folium
 import matplotlib.pyplot as plt
 from matplotlib import rc
 import numpy as np
+import matplotlib.font_manager as fm
+
+# 설치된 폰트 출력
+font_list = [font.Malgun Gothic for font in fm.fontManager.ttflist]
+font_list
+
 
 # Main App Tabs
 st.set_page_config(page_title="데이터 이해 및 분석", layout="wide")
