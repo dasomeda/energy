@@ -6,9 +6,8 @@ import matplotlib.pyplot as plt
 from matplotlib import rc
 import numpy as np
 
-
 # 한글 폰트 설정
-rc('font', family='Nanum Gothic')  # Nanum Gothic 폰트 사용
+rc('font', family='DejaVu Sans')  # Streamlit과 호환되는 기본 폰트 사용
 plt.rcParams['axes.unicode_minus'] = False  # 마이너스 기호 깨짐 방지
 
 # Main App Tabs
