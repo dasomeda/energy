@@ -5,17 +5,7 @@ from streamlit_folium import st_folium
 import matplotlib.pyplot as plt
 from matplotlib import rc
 import numpy as np
-from matplotlib import font_manager
 
-# 설치된 시스템 폰트 확인
-fonts = font_manager.findSystemFonts(fontpaths=None, fontext='ttf')
-
-# 적절한 한글 폰트 선택 (NanumGothic 예제)
-font_path = [f for f in fonts if 'Gothic' in f]
-if font_path:
-    plt.rc('font', family=font_manager.FontProperties(fname=font_path[0]).get_name())
-else:
-    print("적절한 한글 폰트를 찾을 수 없습니다.")
 
 # Main App Tabs
 st.set_page_config(page_title="데이터 이해 및 분석", layout="wide")
