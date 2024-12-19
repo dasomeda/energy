@@ -5,10 +5,12 @@ from streamlit_folium import st_folium
 import matplotlib.pyplot as plt
 from matplotlib import rc
 import numpy as np
+from matplotlib import rcParams
 
-# Streamlit의 시스템 폰트와 matplotlib 폰트를 동기화
-rc('font', family='sans-serif')  # sans-serif는 Streamlit의 기본 폰트와 유사
+# matplotlib 기본 폰트로 설정
+rcParams.update({'font.family': 'DejaVu Sans'})
 plt.rcParams['axes.unicode_minus'] = False  # 마이너스 기호 깨짐 방지
+
 
 # Main App Tabs
 st.set_page_config(page_title="데이터 이해 및 분석", layout="wide")
