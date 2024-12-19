@@ -6,6 +6,9 @@ import matplotlib.pyplot as plt
 from matplotlib import rc
 import numpy as np
 
+df.to_csv('filename.csv', index=False, encoding='utf-8') # 한글 깨짐 발생 할 때 
+df.to_csv('filename.csv', index=False, encoding='utf-8-sig') # 한글 정상 표현
+
 # Main App Tabs
 st.set_page_config(page_title="데이터 이해 및 분석", layout="wide")
 st.title(":bar_chart: 데이터 이해 및 분석")
