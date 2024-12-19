@@ -5,19 +5,11 @@ from streamlit_folium import st_folium
 import matplotlib.pyplot as plt
 from matplotlib import rc
 import numpy as np
-import os
+
 
 # Streamlit 기본 설정
 st.set_page_config(page_title="그래프 한글 깨짐 문제 해결", layout="wide")
 
-# matplotlib 폰트 설정
-# Streamlit 앱 배포 환경에서도 사용 가능한 기본 폰트 설정
-font_path = "energy/NanumGothic-Regular.ttf"  # 배포 환경에서 사용 가능한 폰트 경로
-if not os.path.exists(font_path):
-    st.warning("NanumGothic 폰트를 사용할 수 없습니다. 배포 환경에서 폰트를 확인하세요.")
-else:
-    rc('font', family="NanumGothic")
-    plt.rcParams['axes.unicode_minus'] = False  # 마이너스 기호 깨짐 방지
 
 # Main App Tabs
 st.set_page_config(page_title="데이터 이해 및 분석", layout="wide")
