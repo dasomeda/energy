@@ -5,10 +5,19 @@ from streamlit_folium import st_folium
 import matplotlib.pyplot as plt
 from matplotlib import rc
 import numpy as np
+import os
 
-# 한글 폰트 설정
-rc('font', family='DejaVu Sans')  # Streamlit과 호환되는 기본 폰트 사용
-plt.rcParams['axes.unicode_minus'] = False  # 마이너스 기호 깨짐 방지
+# Streamlit 기본 설정
+st.set_page_config(page_title="그래프 한글 깨짐 문제 해결", layout="wide")
+
+# matplotlib 폰트 설정
+# Streamlit 앱 배포 환경에서도 사용 가능한 기본 폰트 설정
+font_path = "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"  # 배포 환경에서 사용 가능한 폰트 경로
+if not os.path.exists(font_path):
+    st.warning("NanumGothic 폰트를 사용할 수 없습니다. 배포 환경에서 폰트를 확인하세요.")
+else:
+    rc('font', family="NanumGothic")
+    plt.rcParams['axes.unicode_minus'] = False  # 마이너스 기호 깨짐 방지
 
 # Main App Tabs
 st.set_page_config(page_title="데이터 이해 및 분석", layout="wide")
@@ -112,7 +121,7 @@ with tabs[0]:
 ### 질문
 1. 발전량과 가장 상관관계가 있는 변인은?
 """, unsafe_allow_html=True)
-        user_choice = st.selectbox("X축 선택 (정답은 설비용량(kW))", ['위도', '경도','설치연도', '설비용량(kW)'], key="question1")
+        user_choice = st.selectbox("X축을 선택하면서 확인해봐라 ", ['위도', '경도','설치연도', '설비용량(kW)'], key="question1")
         if st.button("제출", key="submit1"):
             if user_choice == '설비용량(kW)':
                 st.success("정답입니다!")
