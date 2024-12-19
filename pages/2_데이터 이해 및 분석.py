@@ -6,8 +6,11 @@ import matplotlib.pyplot as plt
 from matplotlib import rc
 import numpy as np
 
-# 한글 폰트 설정 (예: Malgun Gothic)
-rc('font', family='DejaVu Sans')  # Windows의 경우
+# Streamlit 기본 설정
+st.set_page_config(page_title="한글 깨짐 방지 테스트", layout="wide")
+
+# Matplotlib에서 기본 한글 폰트 설정
+plt.rcParams['font.family'] = 'Arial'  # 기본적으로 제공되는 Arial로 지정
 plt.rcParams['axes.unicode_minus'] = False  # 마이너스 기호 깨짐 방지
 
 # Main App Tabs
