@@ -7,9 +7,6 @@ from matplotlib import rc
 import numpy as np
 
 
-# Streamlit 기본 설정
-st.set_page_config(page_title="그래프 한글 깨짐 문제 해결", layout="wide")
-
 
 # Main App Tabs
 st.set_page_config(page_title="데이터 이해 및 분석", layout="wide")
