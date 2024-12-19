@@ -6,14 +6,14 @@ import matplotlib.pyplot as plt
 from matplotlib import rc
 import numpy as np
 
-
+# Streamlit의 시스템 폰트와 matplotlib 폰트를 동기화
+rc('font', family='sans-serif')  # sans-serif는 Streamlit의 기본 폰트와 유사
+plt.rcParams['axes.unicode_minus'] = False  # 마이너스 기호 깨짐 방지
 
 # Main App Tabs
 st.set_page_config(page_title="데이터 이해 및 분석", layout="wide")
 st.title(":bar_chart: 데이터 이해 및 분석")
 
-rc('font', family='Malgun Gothic')  # Windows 시스템에서 한글 폰트 설정
-plt.rcParams['axes.unicode_minus'] = False  # 마이너스 기호 깨짐 방지
 
 # Sub-tabs for "데이터 이해 및 분석"
 tabs = st.tabs([
