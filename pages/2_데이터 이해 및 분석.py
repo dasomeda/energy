@@ -12,7 +12,7 @@ st.set_page_config(page_title="그래프 한글 깨짐 문제 해결", layout="w
 
 # matplotlib 폰트 설정
 # Streamlit 앱 배포 환경에서도 사용 가능한 기본 폰트 설정
-font_path = "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"  # 배포 환경에서 사용 가능한 폰트 경로
+font_path = "NanumGothic-Regular.ttf"  # 배포 환경에서 사용 가능한 폰트 경로
 if not os.path.exists(font_path):
     st.warning("NanumGothic 폰트를 사용할 수 없습니다. 배포 환경에서 폰트를 확인하세요.")
 else:
