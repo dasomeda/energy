@@ -4,4 +4,3 @@ matplotlib
 streamlit-folium
 numpy
 streamlit-extras
-koreanize-matploMess
