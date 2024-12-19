@@ -7,7 +7,7 @@ from matplotlib import rc
 import numpy as np
 
 # 한글 폰트 설정 (예: Malgun Gothic)
-rc('font', family='Malgun Gothic')  # Windows의 경우
+rc('font', family='DejaVu Sans')  # Windows의 경우
 plt.rcParams['axes.unicode_minus'] = False  # 마이너스 기호 깨짐 방지
 
 # Main App Tabs
