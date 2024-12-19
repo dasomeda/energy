@@ -3,9 +3,14 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 import matplotlib.pyplot as plt
-from matplotlib import rc
+from matplotlib import font_manager, rc
 import numpy as np
 
+# 한글 폰트 설정
+font_path = "energy/NanumGothic.ttf"  # Nanum Gothic 폰트 경로
+font_prop = font_manager.FontProperties(fname=font_path)
+rc('font', family=font_prop.get_name())
+plt.rcParams['axes.unicode_minus'] = False  # 마이너스 기호 깨짐 방지
 
 # Main App Tabs
 st.set_page_config(page_title="데이터 이해 및 분석", layout="wide")
